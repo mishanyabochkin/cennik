@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #101114;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #a8ff60;
+    color: #101114;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header p {
+    margin: 4px 0 0;
+    color: #8c8e98;
+    font-size: 13px;
+}
+
+.camera-frame {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    border: 1px solid #33353e;
+    border-radius: 22px;
+    background: #1a1b20;
+}
+
+.camera-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8c8e98;
+}
+
+.camera-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.camera-placeholder p {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: white;
+}
+
+.camera-placeholder span {
+    font-size: 12px;
+}
+
+.scan-line {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    height: 2px;
+    background: #a8ff60;
+    box-shadow: 0 0 12px #a8ff60;
+    opacity: 0.7;
+}
+
+.scan-button {
+    width: 100%;
+    height: 56px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 16px;
+    background: #a8ff60;
+    color: #101114;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.scan-button span {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.currency-section {
+    margin-top: 32px;
+}
+
+.currency-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.live-status {
+    color: #a8ff60;
+    font-size: 11px;
+}
+
+.currency-card {
+    padding: 18px;
+    border: 1px solid #33353e;
+    border-radius: 18px;
+    background: #1a1b20;
+}
+
+.currency-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #8c8e98;
+    font-size: 12px;
+}
+
+select {
+    max-width: 145px;
+    padding: 8px;
+    border: 1px solid #33353e;
+    border-radius: 10px;
+    background: #25262d;
+    color: white;
+    font-size: 13px;
+}
+
+input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.swap-button {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: -1px auto;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #33353e;
+    border-radius: 50%;
+    background: #25262d;
+    color: #a8ff60;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.result-card {
+    border-color: #a8ff6040;
+}
+
+.result-value {
+    margin-top: 20px;
+    color: #a8ff60;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.rate-info {
+    margin: 14px 0;
+    color: #8c8e98;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    color: #656773;
+    font-size: 11px;
+}
+
+@media (max-width: 360px) {
+    .app {
+        padding: 18px 14px;
+    }
+
+    .camera-frame {
+        height: 220px;
+    }
+
+    input,
+    .result-value {
+        font-size: 28px;
+    }
+}

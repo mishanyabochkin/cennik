@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101114">
+    <title>Ценник — валютный сканер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header>
+            <div class="logo">₽</div>
+            <div>
+                <h1>Ценник</h1>
+                <p>Валютный сканер</p>
+            </div>
+        </header>
+
+        <section class="camera-section">
+            
+<div class="camera-frame">
+    <video id="camera" autoplay playsinline muted></video>
+
+    <div class="camera-placeholder" id="cameraPlaceholder">
+        <div class="camera-icon">📷</div>
+        <p>Камера готова к запуску</p>
+        <span>Наведи её на ценник</span>
+    </div>
+
+    <div class="scan-line"></div>
+</div>
+
+<canvas id="captureCanvas" hidden></canvas>
+
+
+            <button id="scanButton" class="scan-button">
+                <span>⌖</span> Сканировать ценник
+            </button>
+        </section>
+
+        <section class="currency-section">
+            <div class="currency-header">
+                <h2>Конвертация</h2>
+                <span class="live-status">● Курс онлайн</span>
+            </div>
+
+            <div class="currency-card">
+                <div class="currency-label">
+                    <span>Исходная валюта</span>
+                    <select id="fromCurrency">
+                        <option value="CNY">🇨🇳 CNY ¥</option>
+                        <option value="RUB">🇷🇺 RUB ₽</option>
+                        <option value="USD">🇺🇸 USD $</option>
+                        <option value="EUR">🇪🇺 EUR €</option>
+                    </select>
+                </div>
+
+                <input
+                    type="number"
+                    id="priceInput"
+                    placeholder="0.00"
+                    value=""
+                >
+            </div>
+
+            <button id="swapButton" class="swap-button">⇅</button>
+
+            <div class="currency-card result-card">
+                <div class="currency-label">
+                    <span>Результат</span>
+                    <select id="toCurrency">
+                        <option value="RUB">🇷🇺 RUB ₽</option>
+                        <option value="CNY">🇨🇳 CNY ¥</option>
+                        <option value="USD">🇺🇸 USD $</option>
+                        <option value="EUR">🇪🇺 EUR €</option>
+                    </select>
+                </div>
+
+                <div id="result" class="result-value">0.00</div>
+            </div>
+
+            <p id="rateInfo" class="rate-info">
+                Введи цену для расчёта
+            </p>
+        </section>
+
+        <footer>
+            <span>Ценник</span>
+            <span>Версия 0.1</span>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
